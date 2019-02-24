@@ -1,21 +1,19 @@
-name: chuck-norris-webserver
-version: '1.0.0'
-summary: Chuck Norris quotation nodejs server
+name: raspberry-pi-node-gpio
+version: '0.0.2'
+summary: Control Raspberry Pi GPIO Pins With Node On Ubuntu Core
 description: |
-  This example shows how to build a nodejs web server. This enables us to
-  demonstrate how service works, basic confinement rules to access and listen
-  on the network, as well as the nodejs snapcraft plugin.
+  This boilerplate snap shows how to control the GPIO pins of a raspberry pi
+  running Ubuntu Core 18 with a snap that follows strict confinement.
 grade: stable
 confinement: strict
 
 apps:
-  node-service:
-    command: bin/chuck-norris-app
-    daemon: simple
-    restart-condition: always
-    plugs: [network-bind]
+  raspberry-pi-node-gpio:
+    command: raspberry-pi-node-gpio
 
 parts:
-  webserver:
+  raspberry-pi-node-gpio:
     source: .
     plugin: nodejs
+    node-engine: 10.15.1
+    node-package-manager: npm

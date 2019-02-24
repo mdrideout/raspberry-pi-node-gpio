@@ -1,13 +1,21 @@
-# Instructions
-These instructions are for testing a nodejs snap vm that responds to HTTP requests. This code is from this snap tutorial: https://github.com/ubuntu/snap-tutorials-code/tree/master/build-a-nodejs-service/final
+# Note
+In case anyone finds this - this is nowhere near ready to use as a demo.
 
-## Create The Snap
-At the root of the project directory, run `snapcraft`. This will generate a **.snap** file that can be installed onto a multipass virtual machine.
-```
-snapcraft
-```
+# Raspberry Pi Nodejs GPIO Control
+Ubuntu Core 18 ships with the ability to control the gpio of Raspberry Pi 3 devices.
 
-## Run Snap On Multipass Linux Virtual Machine
+## References
+Set up Ubuntu Core on your raspberry pi [https://www.ubuntu.com/download/iot/raspberry-pi-2-3](https://www.ubuntu.com/download/iot/raspberry-pi-2-3)
+
+# Installation
+This will walk you through installing this snap on a Raspberry Pi running Ubuntu Core 18 with test commands to demonstrate that it is working correctly. 
+
+_See here for [instructions to install Ubuntu Core 18 on Raspberry Pi](https://www.ubuntu.com/download/iot/raspberry-pi-2-3)._
+
+
+## Test On A Multipass Virtual Machine
+This can be helpful for testing on MacOS since it's not as straight forward as testing your snap on Ubuntu.
+
 Create a Linux virtual machine for testing snaps
 ```
 multipass launch -n testvm
@@ -15,7 +23,7 @@ multipass launch -n testvm
 
 Copy the .snap file to the virtual machine
 ```
-multipass copy-files wethr*.snap testvm:
+multipass copy-files *.snap testvm:
 ```
 
 Connect to the virtual machine
@@ -25,7 +33,7 @@ multipass shell testvm
 
 Install the snap inside the virtual machine
 ```
-sudo snap install --dangerous wethr*.snap
+sudo snap install --dangerous *.snap
 ```
 
 

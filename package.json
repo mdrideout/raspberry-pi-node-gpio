@@ -1,11 +1,33 @@
 {
-    "name": "chuck-norris-app",
-    "version": "1.0.0",
-    "description": "Chuck Norris quotation nodejs server",
-    "license": "MIT",
-    "private": true,
-    "bin": "./main.js",
-    "dependencies": {
-      "chucknorris-io": "^1.0.4"
-    }
+  "name": "raspberry-pi-node-gpio",
+  "version": "0.0.2",
+  "description": "An app designed for a snap package that controls the GPIO pins of a raspberry pi on Ubuntu Core 18",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "raspberry-pi-node-gpio": "./main.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdrideout/raspberry-pi-node-gpio.git"
+  },
+  "keywords": [
+    "raspberry",
+    "pi",
+    "gpio",
+    "node",
+    "js",
+    "snap"
+  ],
+  "author": "Matthew Rideout <mdrideout@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdrideout/raspberry-pi-node-gpio/issues"
+  },
+  "homepage": "https://github.com/mdrideout/raspberry-pi-node-gpio#readme",
+  "dependencies": {
+
+  }
 }
