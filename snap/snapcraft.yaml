@@ -1,6 +1,8 @@
 name: raspberry-pi-node-gpio
+title: Raspberry Pi Node GPIO Boilerplate
+base: core18
 version: '0.0.2'
-summary: Control Raspberry Pi GPIO Pins With Node On Ubuntu Core
+summary: Control Raspberry Pi GPIO Pins With Node On Ubuntu Core 18
 description: |
   This boilerplate snap shows how to control the GPIO pins of a raspberry pi
   running Ubuntu Core 18 with a snap that follows strict confinement.
@@ -15,5 +17,5 @@ parts:
   raspberry-pi-node-gpio:
     source: .
     plugin: nodejs
-    node-engine: 10.15.1
+    node-engine: 8.15.0
     node-package-manager: npm
