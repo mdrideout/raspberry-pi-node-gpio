@@ -6,12 +6,22 @@ summary: Control Raspberry Pi GPIO Pins With Node On Ubuntu Core 18
 description: |
   This boilerplate snap shows how to control the GPIO pins of a raspberry pi
   running Ubuntu Core 18 with a snap that follows strict confinement.
-grade: stable
+grade: devel
 confinement: strict
 
 apps:
-  raspberry-pi-node-gpio:
-    command: raspberry-pi-node-gpio
+  startup:
+    command: startup
+    daemon: oneshot #runs this command once at startup
+    plugs: 
+      - network-bind # Node requires network-bind plug to function
+      - gpio
+  main:
+    command: main
+    plugs:
+      - network-bind
+      - gpio
+    
 
 parts:
   raspberry-pi-node-gpio:
