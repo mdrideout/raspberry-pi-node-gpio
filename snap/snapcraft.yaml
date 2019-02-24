@@ -17,5 +17,3 @@ parts:
   raspberry-pi-node-gpio:
     source: .
     plugin: nodejs
-    node-engine: 8.15.0
-    node-package-manager: npm
