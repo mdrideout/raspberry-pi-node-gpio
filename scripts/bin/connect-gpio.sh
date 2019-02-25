@@ -6,7 +6,7 @@ echo "Starting GPIO connection process...";
 # If "pi" snap is installed, make our connection
 if $(snap list pi); then
     echo "pi package installed, connecting gpio"
-    # snap connect raspberry-pi-node-gpio:gpio pi:bcm-gpio-4
+    snap connect raspberry-pi-node-gpio:gpio pi:bcm-gpio-4
 fi
 
 if ! $(snap list pi); then
