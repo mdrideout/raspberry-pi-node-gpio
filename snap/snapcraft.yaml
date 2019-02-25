@@ -10,20 +10,20 @@ grade: devel
 confinement: strict
 
 apps:
-  startup:
-    command: startup
+  init-scripts:
+    command: bin/connect-gpio.sh
     daemon: oneshot #runs this command once at startup
     plugs: 
-      - network-bind # Node requires network-bind plug to function
       - gpio
   main:
     command: main
     plugs:
       - network-bind
       - gpio
-    
-
 parts:
   raspberry-pi-node-gpio:
     source: .
     plugin: nodejs
+  scripts:
+    source: ./scripts
+    plugin: dump

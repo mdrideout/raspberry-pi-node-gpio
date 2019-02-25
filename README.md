@@ -59,3 +59,18 @@ Exit the virtual machine
 ```
 exit
 ```
+
+## Other Helpful Commands
+Check on service status
+```
+systemctl status snap.<snap_name>.<app_or_service_name>.service
+```
+Example:
+```
+systemctl status snap.raspberry-pi-node-gpio.init-scripts.service
+```
+
+Other Dump Data
+```
+journalctl -xe
+```
