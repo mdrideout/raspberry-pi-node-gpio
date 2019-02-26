@@ -61,6 +61,16 @@ exit
 ```
 
 ## Other Helpful Commands
+Copy a directory containing a snap project to a remote destination via ssh (for remote building, since we can't build armhf on an amd64 system)
+```
+scp -i <key_location> -r <source_directory> <username>@<ip_address>:<remote_directory>
+```
+
+Example
+```
+scp -i ~/Documents/ssh_keys/raspberrypi/raspberrypi -r ~/repos/snaps/raspberry-pi-node-gpio mdrideout@192.168.86.26:build-snap
+```
+
 Check on service status
 ```
 systemctl status snap.<snap_name>.<app_or_service_name>.service

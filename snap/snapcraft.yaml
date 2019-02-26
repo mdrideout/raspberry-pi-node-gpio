@@ -15,16 +15,16 @@ architectures:
     run-on: armhf
 
 apps:
-  init-scripts:
-    command: bin/connect-gpio.sh
-    daemon: oneshot #runs this command once at startup
-    plugs: 
-      - gpio
+  # init-scripts:
+  #   command: bin/connect-gpio.sh
+  #   daemon: oneshot #runs this command once at startup
+  #   plugs: 
+  #     - gpio
   main:
     command: main
     plugs:
       - network-bind
-      - gpio
+      - pi:bcm-gpio-4
 parts:
   raspberry-pi-node-gpio:
     source: .
