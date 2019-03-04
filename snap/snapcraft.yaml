@@ -1,5 +1,4 @@
 name: raspberry-pi-node-gpio
-title: Raspberry Pi Node GPIO Boilerplate
 base: core18
 version: '0.0.2'
 summary: Control Raspberry Pi GPIO Pins With Node On Ubuntu Core 18
@@ -11,8 +10,8 @@ grade: devel
 confinement: strict
 
 architectures:
-  - build-on: armhf
-    run-on: armhf
+  - build-on: arm64
+    run-on: arm64
 
 apps:
   # init-scripts:
@@ -24,7 +23,7 @@ apps:
     command: main
     plugs:
       - network-bind
-      - pi:bcm-gpio-4
+      - gpio
 parts:
   raspberry-pi-node-gpio:
     source: .
